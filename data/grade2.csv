@@ -1,0 +1,160 @@
+81,数,13,number / count,sū,kazu
+82,多,6,many / much,ta,oo-i
+83,少,4,a few / a little,shō,suku-nai / suko-shi
+84,万,3,ten thousand,ban / man,yorozu
+85,半,5,half,han,naka-ba
+86,形,7,shape,kei / gyō,katachi
+87,太,4,thick,ta,futo-i
+88,細,11,thin,sai,hoso-i
+89,広,5,wide,kō,hiro-i
+90,長,8,long; leader,chō,naga-i
+91,点,9,point,ten,bochi
+92,丸,3,circle,gan,maru
+93,交,6,intersect,kou,maji-waru
+94,光,6,light,kou,hikari
+95,角,7,corner; horn,kaku,kado / tsuno / sumi
+96,計,9,measure,kei,haka-ru
+97,直,8,straight; fix,choku / jiki,tada-chi / nao-su
+98,線,15,line,sen,suji
+99,矢,5,arrow,shi,ya
+100,弱,10,weak,jaku,yowa-i
+101,強,11,strong,kyō,tsuyo-i
+102,高,10,high,kō,taka-i
+103,同,6,same,dō,ona-ji
+104,親,16,parent,shin,oya
+105,母,5,mother,bo,haha / kaa
+106,父,4,father,fu,chichi / tou
+107,姉,8,older sister,shi,ane
+108,兄,5,older brother,kei / kyō,ani
+109,弟,7,younger brother,tei / dai,otōto
+110,妹,8,younger sister,mai,imōto
+111,自,6,oneself,ji / shi,mizuka-ra
+112,友,4,friend,yū,tomo
+113,体,7,body,tai,karada
+114,毛,4,hair,mou,ke
+115,頭,16,head,tou,atama
+116,顔,18,face,gan,kao
+117,首,9,neck,shu,kubi
+118,心,4,heart,shin,kokoro
+119,時,10,time,ji,toki
+120,曜,18,weekday,yō,
+121,朝,12,morning,chō,asa
+122,昼,9,daytime,chū,hiru
+123,夜,8,night,ya,yoru
+124,分,4,minute; understand,fun / bun,wa-karu
+125,週,11,week,shū,
+126,春,9,spring,shun,haru
+127,夏,10,summer,ka,natsu
+128,秋,9,autumn,shū,aki
+129,冬,5,winter,tō,fuyu
+130,今,4,now,kon,ima
+131,新,13,new,shin,atara-shii
+132,古,5,old,ko,furu-i
+133,間,12,interval,kan / ken,ma / aida
+134,方,4,direction,hō,kata
+135,北,5,north,hoku,kita
+136,南,9,south,nan,minami
+137,東,8,east,tou,higashi / azuma
+138,西,6,west,sei / sai,nishi
+139,遠,13,far,en,tō-i
+140,近,7,near,kin,chika-i
+141,前,9,before,zen,mae
+142,後,9,after,go / kō,nochi / ushi-ro / ato
+143,内,4,inside,nai,uchi
+144,外,5,outside,gai / ge,soto / hoka / hazu-su
+145,場,12,place,jou,ba
+146,地,6,ground,chi / ji,
+147,国,8,country,koku,kuni
+148,園,13,garden,en,sono
+149,谷,7,valley,koku,tani
+150,野,11,field,ya,no
+151,原,10,meadow,gen,hara
+152,里,7,hometown,ri,sato
+153,市,5,city,shi,ichi
+154,京,8,capital,kyou / kei,miyako
+155,風,9,wind; -like,fū,kaze
+156,雪,11,snow,setsu,yuki
+157,雲,12,cloud,un,kumo
+158,池,6,pond,chi,ike
+159,海,9,sea,kai,umi
+160,岩,8,rock,gan,iwa
+161,星,9,star,sei,hoshi
+162,室,9,room,shitsu,muro
+163,戸,4,door,ko,to / be
+164,家,10,house,ka / ke,ie
+165,寺,6,Buddhist temple,ji,tera
+166,通,10,pass through / commute,tsū,tō-ru / kayo-u
+167,門,8,gates,mon,kado
+168,道,12,road,dou,michi
+169,話,13,talk,wa,hanashi / hana-su
+170,言,7,say,gen / gon,i-u / koto
+171,答,12,answer,tou,kota-eru
+172,声,7,voice,sei,koe
+173,聞,14,hear,bun / mon,ki-ku
+174,語,14,language,go,kata-ru
+175,読,14,read,doku,yo-mu
+176,書,10,write,sho,ka-ku
+177,記,10,record,ki,shiru-su
+178,紙,10,paper,shi,kami
+179,画,8,brush stroke,ga / kaku,
+180,絵,12,picture,kai / e,
+181,図,7,drawing,zu,haka-ru
+182,工,3,craft,kō / ku,
+183,教,11,teach,kyō,oshi-eru
+184,晴,12,clear,sei,hare
+185,思,9,think,shi,omo-u
+186,考,6,consider,kō,kanga-eru
+187,知,8,know,chi,shi-ru
+188,才,3,ability,sai / zai,wazukani / zae
+189,理,11,reason,ri,kotowari
+190,算,14,calculate,san,
+191,作,7,make,saku,tsuku-ru
+192,元,4,origin,gen / gan,moto
+193,食,9,eat,shoku,ta-beru / ku-u
+194,肉,6,meat,niku,
+195,馬,10,horse,ba,uma / ma
+196,牛,4,cow,gyū,ushi
+197,魚,11,fish,gyo,uo / sakana
+198,鳥,11,bird,chō,tori
+199,羽,6,feather,u,ha / hane
+200,鳴,14,chirp,mei,na-ku
+201,麦,7,wheat,baku,mugi
+202,米,6,rice,bei / mai,kome
+203,茶,9,tea,cha / sa,
+204,色,6,colour,shoku,iro
+205,黄,11,yellow,ō,ki
+206,黒,11,black,koku,kuro
+207,来,7,come,rai,ku-ru
+208,行,6,go,kou / gyō,i-ku / yu-ku / okona-u
+209,帰,10,return,ki,kae-ru
+210,歩,8,walk,ho / fu / bu,aru-ku / ayu-mu
+211,走,7,run,sou,hashi-ru
+212,止,4,stop,shi,to-maru
+213,活,9,active,katsu,i-kiru
+214,店,8,store,ten,mise
+215,買,12,buy,bai,ka-u
+216,売,7,sell,bai,u-ru
+217,午,4,noon,go,uma
+218,汽,7,steam,ki,
+219,弓,3,bow,kyū,yumi
+220,回,6,number of times; revolve,kai,mawa-ru
+221,会,6,meet,kai / e,a-u
+222,組,11,team,so,kumi
+223,船,11,ship,sen,fune
+224,明,8,bright,mei,aka-rui
+225,社,7,company,sha,yashiro
+226,切,4,cut,setsu,ki-ru
+227,電,13,electricity,den,
+228,毎,6,every,mai,goto
+229,合,6,fit,gou,a-u
+230,当,6,this; hit,tō,a-taru
+231,台,5,pedestal,dai / tai,
+232,楽,13,music; pleasure,gaku / raku,tano-shii
+233,公,4,public,kou,ōyake
+234,引,4,pull,in,hi-ku
+235,科,9,section,ka,
+236,歌,14,song,ka,uta
+237,刀,2,sword,tou,katana
+238,番,12,number,ban,
+239,用,5,use,you,mochi-iru
+240,何,7,what,ka,nani / nan
