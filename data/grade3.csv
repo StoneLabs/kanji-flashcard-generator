@@ -1,0 +1,200 @@
+241,丁,2,town section; measure word,chō,hinoto
+242,世,5,generation,sei / se,yo
+243,両,6,both,ryō,teru / futatsu
+244,主,5,master / main,shu,nushi / omo
+245,乗,9,ride,jō,no-ru
+246,予,4,beforehand,yo,arakaji-me
+247,事,8,untangible thing,ji,koto
+248,仕,5,serve,shi,tsuka-eru
+249,他,5,other,ta,hoka
+250,代,5,substitute,dai / tai,ka-waru / yo
+251,住,7,dwell,jū,su-mu
+252,使,8,use,shi,tsuka-u
+253,係,9,person in charge,kei,kakari / kaka-ru
+254,倍,10,double,bai,
+255,全,6,whole,zen,matta-ku
+256,具,8,tool,gu,sona-eru / tsubusa-ni
+257,写,5,copy,sha,utsu-su
+258,列,6,row,retsu,
+259,助,7,help,jo,tasu-keru
+260,勉,10,diligence,ben,tsuto-meru
+261,動,11,move,dō,ugo-ku
+262,勝,12,win,shō,ka-tsu
+263,化,4,change,ka,ba-keru
+264,区,4,ward,ku,
+265,医,7,doctor,i,iya-su / i-suru
+266,去,5,leave,kyo / ko,sa-ru
+267,反,4,anti-,han,so-ru
+268,取,8,take,shu,to-ru
+269,受,8,receive,ju,u-keru
+270,号,5,number,gō,yobina / sake-bu
+271,向,6,face,kō,mu-kau
+272,君,7,you; monarch,kun,kimi
+273,味,8,flavor,mi,aji / aji-wau
+274,命,8,fate / life,mei,inochi
+275,和,8,harmony; Japanese,wa,yawa-ragu / nago-yaka
+276,品,9,article,hin,shina
+277,員,10,employee,in,
+278,商,11,commerce,shō,
+279,問,11,question,mon,to-u / ton
+280,坂,7,slope,han,saka
+281,央,5,center,ō,
+282,始,8,begin,shi,haji-meru
+283,委,8,committee,i,yuda-neru
+284,守,6,protect,shu,mamo-ru
+285,安,6,cheap; calm,an,yasu-i
+286,定,8,determine,tei / jō,sada-meru
+287,実,8,fruit; realization,jitsu,mi / mino-ru
+288,客,9,guest,kyaku,
+289,宮,10,Shinto shrine; prince,kyū / gū,miya
+290,宿,11,inn,shuku,yado / yado-ru
+291,寒,12,cold (weather),kan,samu-i
+292,対,7,opposite / against,tai / tsui,aite / soro-i
+293,局,7,office,kyoku,tsubone
+294,屋,9,roof,oku,ya
+295,岸,8,shore,gan,kishi
+296,島,10,island,tō,shima
+297,州,6,state; province,shū,su
+298,帳,11,notebook,chō,tobari
+299,平,5,flat,hei / byō,tai-ra / hira
+300,幸,8,happiness,kō,saiwa-i / shiawa-se
+301,度,9,degree,do,tabi
+302,庫,10,warehouse,ko / ku,kura
+303,庭,10,yard,tei,niwa
+304,式,6,style; ceremony; numerical formula,shiki,
+305,役,7,role,yaku,
+306,待,9,wait,tai,ma-tsu
+307,急,9,hurry,kyū,iso-gu
+308,息,10,breath,soku,iki
+309,悪,11,bad,aku,waru-i
+310,悲,12,sad,hi,kana-shii
+311,想,13,thought,sō,
+312,意,13,idea,i,
+313,感,13,feel,kan,
+314,所,8,place,sho,tokoro
+315,打,5,hit,da,u-tsu
+316,投,7,throw,tō,na-geru
+317,拾,9,pick up,shū,hiro-u
+318,持,9,hold,ji,mo-tsu
+319,指,9,finger,shi,yubi / sa-su
+320,放,8,release,hō,hana-su
+321,整,16,organize,sei,totono-eru
+322,旅,10,trip,ryo,tabi
+323,族,11,tribe,zoku,
+324,昔,8,long ago,seki / shaku,mukashi
+325,昭,9,shine,shō,
+326,暑,12,hot,sho,atsu-i
+327,暗,13,dark,an,kura-i
+328,曲,6,melody; curve,kyoku,ma-garu
+329,有,6,possess,yū,a-ru
+330,服,8,clothes,fuku,
+331,期,12,period of time,ki,
+332,板,8,board,han / ban,ita
+333,柱,9,pillar,chū,hashira
+334,根,10,root,kon,ne
+335,植,12,plant,shoku,u-eru
+336,業,13,business,gyō,
+337,様,14,appearance,yō,sama
+338,横,15,horizontal,ō,yoko
+339,橋,16,bridge,kyō,hashi
+340,次,6,next,ji,tsugi / tsu-gu
+341,歯,12,tooth,shi,ha
+342,死,6,death,shi,shi-nu
+343,氷,5,ice,hyō,kōri
+344,決,7,decide,ketsu,ki-meru
+345,油,8,oil,yu,abura
+346,波,8,wave,ha,nami
+347,注,8,pour,chū,soso-gu
+348,泳,8,swim,ei,oyo-gu
+349,洋,9,ocean,yō,
+350,流,10,stream,ryū,naga-reru
+351,消,10,extinguish,shō,ki-eru / ke-su
+352,深,11,deep,shin,fuka-i
+353,温,12,warm,on,atata-kai
+354,港,12,harbor,kō,minato
+355,湖,12,lake,ko,mizūmi
+356,湯,12,hot water,tō,yu
+357,漢,13,Chinese,kan,
+358,炭,9,charcoal,tan,sumi
+359,物,8,(tangible) thing,butsu / motsu,mono
+360,球,11,ball,kyū,tama
+361,由,5,reason,yū / yu,yoshi
+362,申,5,say,shin,mō-su
+363,界,9,world,kai,
+364,畑,9,farm,,hata / hatake
+365,病,10,sick,byō,yamai
+366,発,9,departure,hatsu,
+367,登,12,climb,tō / to,nobo-ru
+368,皮,5,skin,hi,kawa
+369,皿,5,dish,bei,sara
+370,相,9,mutual,sō,ai
+371,県,9,prefecture,ken,ka-keru
+372,真,10,TRUE,shin,ma
+373,着,12,wear,chaku,ki-ru / tsu-ku
+374,短,12,short,tan,mijika-i
+375,研,9,sharpen,ken,to-gu
+376,礼,5,salute,rei,
+377,神,9,deity,shin / jin,kami
+378,祭,11,festival,sai,matsu-ri
+379,福,13,luck,fuku,
+380,秒,9,second,byō,
+381,究,7,research,kyū,kiwa-meru
+382,章,11,chapter,shō,
+383,童,12,juvenile,dō,warabe
+384,笛,11,whistle,teki,fue
+385,第,11,ordinal,dai,
+386,筆,12,writing brush,hitsu,fude
+387,等,12,class,tō,hito-shii
+388,箱,15,box,sō,hako
+389,級,9,rank,kyū,
+390,終,11,end,shū,o-waru
+391,緑,14,green,ryoku,midori
+392,練,14,practice,ren,ne-ru
+393,羊,6,sheep,yō,hitsuji
+394,美,9,beauty,bi,utsuku-shii
+395,習,11,learn,shū,nara-u
+396,者,8,someone,sha,mono
+397,育,8,nurture,iku,soda-tsu
+398,苦,8,suffer,ku,kuru-shii / niga-i
+399,荷,10,luggage,ka,ni
+400,落,12,fall,raku,o-chiru
+401,葉,12,leaf,yō,ha
+402,薬,16,medicine,yaku,kusuri
+403,血,6,blood,ketsu,chi
+404,表,8,express,hyō,omote / arawa-su
+405,詩,13,poem,shi,uta
+406,調,15,tone,chō,shira-beru
+407,談,15,discuss,dan,
+408,豆,7,beans,tō / zu,mame
+409,負,9,lose,fu,ma-keru / o-u
+410,起,10,awaken,ki,o-kiru
+411,路,13,path,ro,ji
+412,身,7,body,shin,mi
+413,転,11,revolve,ten,koro-bu
+414,軽,12,light,kei,karu-i
+415,農,13,agriculture,nō,
+416,返,7,repay,hen,kae-su
+417,追,9,follow,tsui,o-u
+418,送,9,send,sō,oku-ru
+419,速,10,fast,soku,haya-i
+420,進,11,progress,shin,susu-mu
+421,遊,12,play,yū,aso-bu
+422,運,12,carry,un,hako-bu
+423,部,11,part,bu,
+424,都,11,metropolis,to / tsu,miyako
+425,配,10,distribute,hai,kuba-ru
+426,酒,10,liquor,shu,sake / saka
+427,重,9,heavy / gravity; pile,jū / chō,omo-i / kasa-neru
+428,鉄,13,iron,tetsu,kurogane
+429,銀,14,silver,gin,shirogane
+430,開,12,open,kai,hira-ku / a-ku
+431,院,10,institution,in,
+432,陽,12,sun,yō,hi
+433,階,12,storey,kai,kizahashi
+434,集,12,gather,shū,atsu-maru
+435,面,9,surface,men,omote / tsura
+436,題,18,topic,dai,
+437,飲,12,drink,in,no-mu
+438,館,16,public building,kan,tate
+439,駅,14,station,eki,
+440,鼻,14,nose,bi,hana
