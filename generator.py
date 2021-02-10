@@ -55,6 +55,7 @@ create_folder_or_warn(outputFolder)
 
 font_index = ImageFont.truetype("BabelStoneHan.ttf", 40)
 font_kanji = ImageFont.truetype("BabelStoneHan.ttf", 240)
+font_kback = ImageFont.truetype("BabelStoneHan.ttf", 360)
 font_oktop = ImageFont.truetype("BabelStoneHan.ttf", 70)
 font_onkun = ImageFont.truetype("BabelStoneHan.ttf", 50)
 
@@ -65,8 +66,10 @@ for grade in range(grade_min, grade_max + 1):
 
     # Create PDF file
     pdf = FPDF(unit = "pt", format = [template_width, template_height])
+    pdfFrontOnly = FPDF(unit = "pt", format = [template_width, template_height])
 
     with open("data/grade" + str(grade) + ".csv", encoding="utf8") as c_file:
+        console.print("Rendering grade " + str(grade))
         for line in parse_csv(c_file.read(), name=("Grade " + str(grade))):
             index = line[0]
             kanji = line[1]
@@ -74,8 +77,9 @@ for grade in range(grade_min, grade_max + 1):
             trans = line[3]
             oread = line[4]
             kread = line[5]
-            outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
 
+            # Generate Front
+            outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
             img = Image.open("template.jpg")
             draw = ImageDraw.Draw(img)
 
@@ -112,6 +116,28 @@ for grade in range(grade_min, grade_max + 1):
             # Add to pdf
             pdf.add_page()
             pdf.image(outputFile, 0, 0)
+
+            pdfFrontOnly.add_page()
+            pdfFrontOnly.image(outputFile, 0, 0)
+
+            # Generate back
+            outputFile = os.path.join(gradeFolder, "back_" + str(index) + ".jpg")
+
+            img = Image.open("template_back.jpg")
+            draw = ImageDraw.Draw(img)
+            
+            # Kanji
+            w, h = draw.textsize(str(kanji), font=font_kback)
+            draw.text((template_width * 0.5 - w/2, template_height * 0.5 - h/2), str(kanji), (0, 0, 0), font=font_kback)
+            
+            img.save(outputFile)
+
+            # Add to pdf
+            pdf.add_page()
+            pdf.image(outputFile, 0, 0)
+            
+            console.print(".", end="")
     
     # Output pdf
     pdf.output(os.path.join(outputFolder, "grade_" + str(grade) + ".pdf"), "F")
+    pdfFrontOnly.output(os.path.join(outputFolder, "grade_" + str(grade) + "_front_only.pdf"), "F")
