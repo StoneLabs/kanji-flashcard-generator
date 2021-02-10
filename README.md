@@ -28,6 +28,10 @@ Customization is limited at the moment. Because i honestly dont care :)
 
 You can change the font or the background image files before generating the cards though.
 
+# Tabletop Simulator Workshop
+
+[Click here](https://steamcommunity.com/sharedfiles/filedetails/?id=2390856248)
+
 # License
 
 This is free and unencumbered software released into the public domain.
