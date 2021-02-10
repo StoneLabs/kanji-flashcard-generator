@@ -132,6 +132,12 @@ for grade in range(grade_min, grade_max + 1):
             
             img.save(outputFile)
 
+            # Grade
+            w, h = draw.textsize("GRADE " + str(grade), font=font_onkun)
+            draw.text((template_width * 0.5 - w/2, template_height * 0.15), "GRADE " + str(grade), (0, 0, 0), font=font_onkun)
+            
+            img.save(outputFile)
+
             # Add to pdf
             pdf.add_page()
             pdf.image(outputFile, 0, 0)
