@@ -45,8 +45,8 @@ def create_folder_or_warn(folder):
         console.print("Could not create output directory!")
         exit(1)
 
-grade_min = ask_number("Please enter first grade to generate: ")
-grade_max = ask_number("Please enter last grade to generate: ")
+grade_min = 1 #ask_number("Please enter first grade to generate: ")
+grade_max = 6 #ask_number("Please enter last grade to generate: ")
 
 # Create output folder
 outputFolder = os.path.join("./output/")
