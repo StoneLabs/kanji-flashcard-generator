@@ -6,27 +6,16 @@
 
 Download pre-generated pdfs here: [Release](https://github.com/StoneLabs/kanji-flashcard-generator/releases)
 
-Script to automatically create over 1000 kanji flashcards.
-Execute generator.py to run program.
+The PDF's can be used with printers that support double side printing.<br />
+**Warning:** *This has not been tested yet. I recommend printing only first 4 pages to test. Please report back with using the issue tracker if it worked for you!*
 
-The script will automatically create a jpg for each card. It will also group them in 6 pdf files.
+The script automatically creates over 1000 kanji flash cards in jpg and pdf format.
 
 # What kanjis are this?
 
 > Kyōiku kanji (教育漢字, literally "education kanji"), also known as Gakunenbetsu kanji haitōhyō (学年別漢字配当表, literally "list of kanji by school year") is a list of 1,026 kanji and associated readings developed and maintained by the Japanese Ministry of Education that prescribes which kanji, and which readings of kanji, Japanese students should learn from first grade to the sixth grade (elementary school).
 
 See [Wikipedia](https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji) for more details.
-
-# How to print
-
-Make sure to print multiples pages onto one. If you dont, you'll end up with A4 flash cards.
-Most print dialogues will have an option for this. (Microsoft Edge for example if you cant find one)
-
-# Customize
-
-Customization is limited at the moment. Because i honestly dont care :)
-
-You can change the font or the background image files before generating the cards though.
 
 # Tabletop Simulator Workshop
 
