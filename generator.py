@@ -35,10 +35,17 @@ def ask_number(prompt):
             console.print("Numbers only please!")
     return res
 
+warned = False
 def create_folder_or_warn(folder):
+    global warned
     try:
         if os.path.isdir(folder):
-            input("\nWarning: output folder exists. Press enter to confirm.")
+            if not warned:
+                console.log("Warning: output folder exists. Press enter to confirm!")
+                input()
+            else:
+                console.log("Warning: output folder exists.")
+            warned = True
         else:
             os.mkdir(folder)
     except OSError:
