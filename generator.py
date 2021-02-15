@@ -59,25 +59,21 @@ grade_max = 6 #ask_number("Please enter last grade to generate: ")
 outputFolder = os.path.join("./output/")
 create_folder_or_warn(outputFolder)
 
-
-font_index = ImageFont.truetype("BabelStoneHan.ttf", 40)
-font_kanji = ImageFont.truetype("BabelStoneHan.ttf", 240)
-font_kback = ImageFont.truetype("BabelStoneHan.ttf", 360)
-font_oktop = ImageFont.truetype("BabelStoneHan.ttf", 70)
-font_onkun = ImageFont.truetype("BabelStoneHan.ttf", 50)
-
 for grade in range(grade_min, grade_max + 1):
+    console.print("\n\nRendering grade " + str(grade))
+    
     # Create grade folder
     gradeFolder = os.path.join(outputFolder, "grade_" + str(grade))
     create_folder_or_warn(gradeFolder)
 
     with open("data/grade" + str(grade) + ".csv", encoding="utf8") as c_file:
-        console.print("Rendering grade " + str(grade))
         
         imagesFront = []
         imagesBack = []
         
         for line in parse_csv(c_file.read(), name=("Grade " + str(grade))):
+            console.print(".", end="")
+
             index = line[0]
             kanji = line[1]
             strok = line[2]
@@ -109,7 +105,7 @@ for grade in range(grade_min, grade_max + 1):
             writeCenterBigAsPossible("- Kun -", "BabelStoneHan.ttf", 70, 0.5, 0.75)
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
-            w, h = draw.textsize("Kanji #" + str(index), font=font_index)
+            w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
             draw.text((template_width - w, template_height - h), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             # Save image
