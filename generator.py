@@ -90,33 +90,39 @@ for grade in range(grade_min, grade_max + 1):
             img = Image.open("template.jpg")
             draw = ImageDraw.Draw(img)
 
+            def writeCenterBigAsPossible(text, fontName, maxFontSize, relCenterX, relCenterY):
+                while (True):
+                    currentFont = ImageFont.truetype(fontName, maxFontSize)
+                    w, h = draw.textsize(text, font=currentFont)
+
+                    if (w > template_width):
+                        maxFontSize = maxFontSize - 1
+                        continue
+
+                    draw.text((template_width * relCenterX - w/2, template_height * relCenterY - h/2), text, (0, 0, 0), font=currentFont)
+                    break
+
             # Translation
-            w, h = draw.textsize(str(trans).replace(";", " ").split(" ", 1)[0], font=font_oktop)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.19 - h/2), str(trans).replace(";", " ").split(" ", 1)[0], (0, 0, 0), font=font_oktop)
+            writeCenterBigAsPossible(str(trans), "BabelStoneHan.ttf", 70, 0.5, 0.19)
 
             # Kanji
-            w, h = draw.textsize(str(kanji), font=font_kanji)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.4 - h/2), str(kanji), (0, 0, 0), font=font_kanji)
+            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 240, 0.5, 0.4)
 
             # On
-            w, h = draw.textsize("- On -", font=font_oktop)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.6 - h/2), "- On -", (0, 0, 0), font=font_oktop)
+            writeCenterBigAsPossible("- On -", "BabelStoneHan.ttf", 70, 0.5, 0.6)
 
             # On Value
-            w, h = draw.textsize(oread, font=font_onkun)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.67 - h/2), oread, (0, 0, 0), font=font_onkun)
+            writeCenterBigAsPossible(oread, "BabelStoneHan.ttf", 50, 0.5, 0.67)
 
             # Kun
-            w, h = draw.textsize("- Kun -", font=font_oktop)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.75 - h/2), "- Kun -", (0, 0, 0), font=font_oktop)
+            writeCenterBigAsPossible("- Kun -", "BabelStoneHan.ttf", 70, 0.5, 0.75)
 
             # Kun Value
-            w, h = draw.textsize(kread, font=font_onkun)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.82 - h/2), kread, (0, 0, 0), font=font_onkun)
+            writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
             # Index
             w, h = draw.textsize("Kanji #" + str(index), font=font_index)
-            draw.text((template_width - w, template_height - h), "Kanji #" + str(index), (0, 0, 0), font=font_index)
+            draw.text((template_width - w, template_height - h), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             img.save(outputFile)
 
@@ -134,14 +140,10 @@ for grade in range(grade_min, grade_max + 1):
             draw = ImageDraw.Draw(img)
             
             # Kanji
-            w, h = draw.textsize(str(kanji), font=font_kback)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.5 - h/2), str(kanji), (0, 0, 0), font=font_kback)
+            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 360, 0.5, 0.5)
             
-            img.save(outputFile)
-
             # Grade
-            w, h = draw.textsize("GRADE " + str(grade), font=font_onkun)
-            draw.text((template_width * 0.5 - w/2, template_height * 0.15), "GRADE " + str(grade), (0, 0, 0), font=font_onkun)
+            writeCenterBigAsPossible("GRADE " + str(grade), "BabelStoneHan.ttf", 50, 0.5, 0.18)
             
             img.save(outputFile)
 
