@@ -71,12 +71,12 @@ for grade in range(grade_min, grade_max + 1):
     gradeFolder = os.path.join(outputFolder, "grade_" + str(grade))
     create_folder_or_warn(gradeFolder)
 
-    # Create PDF file
-    pdf = FPDF(unit = "pt", format = [template_width, template_height])
-    pdfFrontOnly = FPDF(unit = "pt", format = [template_width, template_height])
-
     with open("data/grade" + str(grade) + ".csv", encoding="utf8") as c_file:
         console.print("Rendering grade " + str(grade))
+        
+        imagesFront = []
+        imagesBack = []
+        
         for line in parse_csv(c_file.read(), name=("Grade " + str(grade))):
             index = line[0]
             kanji = line[1]
@@ -86,7 +86,6 @@ for grade in range(grade_min, grade_max + 1):
             kread = line[5]
 
             # Generate Front
-            outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
             img = Image.open("template.jpg")
             draw = ImageDraw.Draw(img)
 
@@ -102,57 +101,89 @@ for grade in range(grade_min, grade_max + 1):
                     draw.text((template_width * relCenterX - w/2, template_height * relCenterY - h/2), text, (0, 0, 0), font=currentFont)
                     break
 
-            # Translation
+            # Draw front side
             writeCenterBigAsPossible(str(trans), "BabelStoneHan.ttf", 70, 0.5, 0.19)
-
-            # Kanji
             writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 240, 0.5, 0.4)
-
-            # On
             writeCenterBigAsPossible("- On -", "BabelStoneHan.ttf", 70, 0.5, 0.6)
-
-            # On Value
             writeCenterBigAsPossible(oread, "BabelStoneHan.ttf", 50, 0.5, 0.67)
-
-            # Kun
             writeCenterBigAsPossible("- Kun -", "BabelStoneHan.ttf", 70, 0.5, 0.75)
-
-            # Kun Value
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
-            # Index
             w, h = draw.textsize("Kanji #" + str(index), font=font_index)
             draw.text((template_width - w, template_height - h), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
+            # Save image
+            outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
             img.save(outputFile)
-
-            # Add to pdf
-            pdf.add_page()
-            pdf.image(outputFile, 0, 0)
-
-            pdfFrontOnly.add_page()
-            pdfFrontOnly.image(outputFile, 0, 0)
+            imagesFront.append(outputFile)
 
             # Generate back
-            outputFile = os.path.join(gradeFolder, "back_" + str(index) + ".jpg")
-
             img = Image.open("template_back.jpg")
             draw = ImageDraw.Draw(img)
             
-            # Kanji
+            # Draw back side
             writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 360, 0.5, 0.5)
-            
-            # Grade
             writeCenterBigAsPossible("GRADE " + str(grade), "BabelStoneHan.ttf", 50, 0.5, 0.18)
             
+            # Save image
+            outputFile = os.path.join(gradeFolder, "back_" + str(index) + ".jpg")
             img.save(outputFile)
-
-            # Add to pdf
-            pdf.add_page()
-            pdf.image(outputFile, 0, 0)
-            
-            console.print(".", end="")
+            imagesBack.append(outputFile)
     
-    # Output pdf
-    pdf.output(os.path.join(outputFolder, "grade_" + str(grade) + ".pdf"), "F")
-    pdfFrontOnly.output(os.path.join(outputFolder, "grade_" + str(grade) + "_front_only.pdf"), "F")
+        # Create PDF file
+        # A4 =  210 mm x  297 mm =  595 pt x  842 pt
+        pdf = FPDF(unit = "pt", format = "A4")
+        margin = 40 #pt
+
+        def addImageRel(fifo, centerX, centerY, ratio, w, border):
+            if len(fifo) < 1:
+                return
+
+            width = 595
+            height = 842
+            widthNM = 595 - 2 * margin
+            heighthNM = 842 - 2 * margin
+
+            imgWidth = w * widthNM
+            imgHight = w * widthNM / ratio
+
+            imgX = margin + centerX * widthNM - imgWidth/2
+            imgY = margin + centerY * heighthNM - imgHight/2
+
+            pdf.image(fifo.pop(0), imgX, imgY, imgWidth, imgHight)
+            if border:
+                pdf.rect(imgX, imgY, imgWidth, imgHight)
+
+        while len(imagesFront) > 0:
+            pdf.add_page()
+            #pdf.rect(margin, margin, 595 - 2 * margin,  842 - 2 * margin)
+
+            addImageRel(imagesFront, 0.15, 0.17, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.50, 0.17, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.85, 0.17, 6/10, 0.28, True)
+
+            addImageRel(imagesFront, 0.15, 0.5, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.50, 0.5, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.85, 0.5, 6/10, 0.28, True)
+
+            addImageRel(imagesFront, 0.15, 0.83, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.50, 0.83, 6/10, 0.28, True)
+            addImageRel(imagesFront, 0.85, 0.83, 6/10, 0.28, True)
+
+            # Print back sides in opposit X order for double side printing
+            pdf.add_page()
+
+            addImageRel(imagesBack, 0.85, 0.17, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.50, 0.17, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.15, 0.17, 6/10, 0.28, False)
+
+            addImageRel(imagesBack, 0.85, 0.5, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.50, 0.5, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.15, 0.5, 6/10, 0.28, False)
+
+            addImageRel(imagesBack, 0.85, 0.83, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.50, 0.83, 6/10, 0.28, False)
+            addImageRel(imagesBack, 0.15, 0.83, 6/10, 0.28, False)
+
+        # Generate PDF
+        pdf.output(os.path.join(outputFolder, "grade_" + str(grade) + ".pdf"), "F")
