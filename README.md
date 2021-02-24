@@ -7,7 +7,7 @@
 Download pre-generated pdfs here: [Release](https://github.com/StoneLabs/kanji-flashcard-generator/releases)
 
 The PDF's can be used with printers that support double side printing.<br />
-**Warning:** *This has not been tested yet. I recommend printing only first 4 pages to test. Please report back with using the issue tracker if it worked for you!*
+**Warning:** *I recommend test printing a few pages at first. Please report back with using the issue tracker if there was any problem!*
 
 The script automatically creates over 1000 kanji flash cards in jpg and pdf format.
 
