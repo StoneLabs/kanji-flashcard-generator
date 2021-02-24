@@ -1,6 +1,6 @@
 <img alt="Github open issues" src="https://img.shields.io/github/issues-raw/StoneLabs/kanji-flashcard-generator?style=flat-square"> <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/StoneLabs/kanji-flashcard-generator?style=flat-square"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/StoneLabs/kanji-flashcard-generator?style=flat-square"> <a href="https://github.com/StoneLabs/kanji-anki-generator/"><img align="right" alt="GitHub Repo stars" src="https://img.shields.io/badge/See%20Also%3A-Kanji%20Anki%20Generator-blue?style=flat-square"></a>
 
-<img src="README.jpg" align="right" width="200" />
+<img src="README.png" align="right" width="200" />
 
 # Kanji Flashcard generator
 
