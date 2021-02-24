@@ -16,8 +16,8 @@ install()
 template_width = 600
 template_height = 1000
 
-# Margin for text. Usefull for professional printing
-margin = 50
+# Padding for text. Usefull for professional printing
+padding = 50
 
 # Parse CSV file and return a list of lists
 def parse_csv(text, sep=",", name="unknown file"):
@@ -53,8 +53,8 @@ if input("Would you like to convert on/kun readings to hiragana (EXPERIMENTAL)? 
     import romajitable
     convert_to_kana = True
     
-if input("Would you like to keep a margin on all texts (you can ajust this in generator.py)? (Y/n): ").lower().strip()[:1] == "n":
-    margin = 0
+if input("Would you like to keep padding on all texts (you can ajust this in generator.py)? (Y/n): ").lower().strip()[:1] == "n":
+    padding = 0
 
 print()
 
@@ -101,7 +101,7 @@ for grade in range(grade_min, grade_max + 1):
                     currentFont = ImageFont.truetype(fontName, maxFontSize)
                     w, h = draw.textsize(text, font=currentFont)
 
-                    if (w > template_width - 2*margin):
+                    if (w > template_width - 2*padding):
                         maxFontSize = maxFontSize - 1
                         continue
 
@@ -117,7 +117,7 @@ for grade in range(grade_min, grade_max + 1):
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
             w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
-            draw.text((template_width/2 - w/2, template_height - h - margin), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
+            draw.text((template_width/2 - w/2, template_height - h - padding), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             # Save image
             outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
