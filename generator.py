@@ -30,15 +30,6 @@ def parse_csv(text, sep=",", name="unknown file"):
     console.print(table, "\n\n\n")
     return ret
 
-def ask_number(prompt):
-    while True:
-        try:
-            res = int(input(prompt))
-            break
-        except ValueError:
-            console.print("Numbers only please!")
-    return res
-
 warned = False
 def create_folder_or_warn(folder):
     global warned
@@ -56,6 +47,7 @@ def create_folder_or_warn(folder):
         console.print("Could not create output directory!")
         exit(1)
 
+# Ask user input
 convert_to_kana = False
 if input("Would you like to convert on/kun readings to hiragana (EXPERIMENTAL)? (y/N): ").lower().strip()[:1] == "y":
     import romajitable
@@ -64,8 +56,10 @@ if input("Would you like to convert on/kun readings to hiragana (EXPERIMENTAL)? 
 if input("Would you like to keep a margin on all texts (you can ajust this in generator.py)? (Y/n): ").lower().strip()[:1] == "n":
     margin = 0
 
-grade_min = 1 #ask_number("Please enter first grade to generate: ")
-grade_max = 6 #ask_number("Please enter last grade to generate: ")
+print()
+
+grade_min = 1
+grade_max = 6
 
 # Create output folder
 outputFolder = os.path.join("./output/")
@@ -123,7 +117,7 @@ for grade in range(grade_min, grade_max + 1):
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
             w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
-            draw.text((template_width - w - margin, template_height - h - margin), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
+            draw.text((template_width/2 - w/2, template_height - h - margin), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             # Save image
             outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
