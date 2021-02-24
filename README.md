@@ -21,6 +21,11 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji) for more detail
 
 If you prefer Hiragana on your cards instead of romaji or want the text to have padding you can run the generator yourself. There is an option to enable padding and to convert the romaji readings to hiragana in the generator. 
 
+# How to run the generator
+
+You can download the generator from the latest release [here](https://github.com/StoneLabs/kanji-flashcard-generator/releases/latest/download/generator.zip).<br/>
+There is no installation needed, just run **generator.exe**. It was packed using [PyInstaller](https://github.com/pyinstaller/pyinstaller).
+
 # Tabletop Simulator Workshop
 
 [Click here](https://steamcommunity.com/sharedfiles/filedetails/?id=2390856248)
