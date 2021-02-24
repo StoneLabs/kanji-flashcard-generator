@@ -17,6 +17,10 @@ The script automatically creates over 1000 kanji flash cards in jpg and pdf form
 
 See [Wikipedia](https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji) for more details.
 
+# Text padding and Hiragana reading
+
+If you prefer Hiragana on your cards instead of romaji or want the text to have padding you can run the generator yourself. There is an option to enable padding and to convert the romaji readings to hiragana in the generator. 
+
 # Tabletop Simulator Workshop
 
 [Click here](https://steamcommunity.com/sharedfiles/filedetails/?id=2390856248)
