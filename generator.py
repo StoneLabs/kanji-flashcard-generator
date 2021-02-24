@@ -8,12 +8,16 @@ from fpdf import FPDF
 
 from rich.table import Table
 from rich.console import Console
+from rich.traceback import install
 console = Console()
+install()
 
 # Note:
 template_width = 600
 template_height = 1000
 
+# Margin for text. Usefull for professional printing
+margin = 50
 
 # Parse CSV file and return a list of lists
 def parse_csv(text, sep=",", name="unknown file"):
@@ -53,10 +57,12 @@ def create_folder_or_warn(folder):
         exit(1)
 
 convert_to_kana = False
-if input("Would you like to convert on/kin readings to hiragana (EXPERIMENTAL)? (y/N): ").lower().strip()[:1] == "y":
+if input("Would you like to convert on/kun readings to hiragana (EXPERIMENTAL)? (y/N): ").lower().strip()[:1] == "y":
     import romajitable
     convert_to_kana = True
     
+if input("Would you like to keep a margin on all texts (you can ajust this in generator.py)? (Y/n): ").lower().strip()[:1] == "n":
+    margin = 0
 
 grade_min = 1 #ask_number("Please enter first grade to generate: ")
 grade_max = 6 #ask_number("Please enter last grade to generate: ")
@@ -101,7 +107,7 @@ for grade in range(grade_min, grade_max + 1):
                     currentFont = ImageFont.truetype(fontName, maxFontSize)
                     w, h = draw.textsize(text, font=currentFont)
 
-                    if (w > template_width):
+                    if (w > template_width - 2*margin):
                         maxFontSize = maxFontSize - 1
                         continue
 
@@ -117,7 +123,7 @@ for grade in range(grade_min, grade_max + 1):
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
 
             w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
-            draw.text((template_width - w, template_height - h), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
+            draw.text((template_width - w - margin, template_height - h - margin), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             # Save image
             outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
