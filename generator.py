@@ -52,6 +52,12 @@ def create_folder_or_warn(folder):
         console.print("Could not create output directory!")
         exit(1)
 
+convert_to_kana = False
+if input("Would you like to convert on/kin readings to hiragana (EXPERIMENTAL)? (y/N): ").lower().strip()[:1] == "y":
+    import romajitable
+    convert_to_kana = True
+    
+
 grade_min = 1 #ask_number("Please enter first grade to generate: ")
 grade_max = 6 #ask_number("Please enter last grade to generate: ")
 
@@ -80,6 +86,11 @@ for grade in range(grade_min, grade_max + 1):
             trans = line[3]
             oread = line[4]
             kread = line[5]
+
+            # Convert to kana
+            if convert_to_kana:
+                oread = romajitable.to_kana(oread.replace(" ", "")).hiragana
+                kread = romajitable.to_kana(kread.replace(" ", "")).hiragana
 
             # Generate Front
             img = Image.open("template.jpg")
@@ -135,8 +146,6 @@ for grade in range(grade_min, grade_max + 1):
             if len(fifo) < 1:
                 return
 
-            width = 595
-            height = 842
             widthNM = 595 - 2 * margin
             heighthNM = 842 - 2 * margin
 
