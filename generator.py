@@ -117,7 +117,7 @@ for grade in range(grade_min, grade_max + 1):
             writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 70, 0.5, 0.82)
 
             w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 50))
-            draw.text((template_width/2 - w/2, template_height - h - padding), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
+            draw.text((template_width/2 - w/2, template_height - h - padding), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 50))
 
             # Save image
             outputFile = os.path.join(gradeFolder, "front_" + str(index) + ".jpg")
