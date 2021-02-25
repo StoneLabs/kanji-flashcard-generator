@@ -13,11 +13,11 @@ console = Console()
 install()
 
 # Note:
-template_width = 600
-template_height = 1000
+template_width = 900
+template_height = 1500
 
 # Padding for text. Usefull for professional printing
-padding = 50
+padding = 80
 
 # Parse CSV file and return a list of lists
 def parse_csv(text, sep=",", name="unknown file"):
@@ -109,14 +109,14 @@ for grade in range(grade_min, grade_max + 1):
                     break
 
             # Draw front side
-            writeCenterBigAsPossible(str(trans), "BabelStoneHan.ttf", 70, 0.5, 0.19)
-            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 240, 0.5, 0.4)
-            writeCenterBigAsPossible("- On -", "BabelStoneHan.ttf", 70, 0.5, 0.6)
-            writeCenterBigAsPossible(oread, "BabelStoneHan.ttf", 50, 0.5, 0.67)
-            writeCenterBigAsPossible("- Kun -", "BabelStoneHan.ttf", 70, 0.5, 0.75)
-            writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 50, 0.5, 0.82)
+            writeCenterBigAsPossible(str(trans), "BabelStoneHan.ttf", 100, 0.5, 0.19)
+            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 300, 0.5, 0.4)
+            writeCenterBigAsPossible("- On -", "BabelStoneHan.ttf", 90, 0.5, 0.6)
+            writeCenterBigAsPossible(oread, "BabelStoneHan.ttf", 70, 0.5, 0.67)
+            writeCenterBigAsPossible("- Kun -", "BabelStoneHan.ttf", 90, 0.5, 0.75)
+            writeCenterBigAsPossible(kread, "BabelStoneHan.ttf", 70, 0.5, 0.82)
 
-            w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
+            w, h = draw.textsize("Kanji #" + str(index), font=ImageFont.truetype("BabelStoneHan.ttf", 50))
             draw.text((template_width/2 - w/2, template_height - h - padding), "Kanji #" + str(index), (0, 0, 0), font=ImageFont.truetype("BabelStoneHan.ttf", 40))
 
             # Save image
@@ -129,8 +129,8 @@ for grade in range(grade_min, grade_max + 1):
             draw = ImageDraw.Draw(img)
             
             # Draw back side
-            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 360, 0.5, 0.5)
-            writeCenterBigAsPossible("GRADE " + str(grade), "BabelStoneHan.ttf", 50, 0.5, 0.18)
+            writeCenterBigAsPossible(str(kanji), "BabelStoneHan.ttf", 450, 0.5, 0.5)
+            writeCenterBigAsPossible("GRADE " + str(grade), "BabelStoneHan.ttf", 70, 0.5, 0.18)
             
             # Save image
             outputFile = os.path.join(gradeFolder, "back_" + str(index) + ".jpg")
