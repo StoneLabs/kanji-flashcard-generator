@@ -21,16 +21,26 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji) for more detail
 
 If you prefer Hiragana on your cards instead of romaji or want the text to have padding you can run the generator yourself. There is an option to enable padding and to convert the romaji readings to hiragana in the generator. 
 
+# Custom Background
+
+You can use any 900x1500 pixel jpg file for the background. To do so, just download the generator and replace the jpgs in the folder with your own.
+
 # How to run the generator
 
 You can download the generator from the latest release [here](https://github.com/StoneLabs/kanji-flashcard-generator/releases/latest/download/generator.zip).<br/>
 There is no installation needed, just run **generator.exe**. It was packed using [PyInstaller](https://github.com/pyinstaller/pyinstaller).
+
+# Professional Printing
+
+The cards are designed with 6/10 aspect ratio. This is pretty close to the tarot card format. There are numerous websites you can upload the cards to get them printed. [This one](https://www.boardgamesmaker.com/print/design-your-own-tarot-cards.html) has a nice interface (I dont know about their quality, i haven't ordered from them yet). 
 
 # Tabletop Simulator Workshop
 
 [Click here](https://steamcommunity.com/sharedfiles/filedetails/?id=2390856248)
 
 # License
+
+Note: *for the license of the font see BabelStoneHan-license.txt*
 
 This is free and unencumbered software released into the public domain.
 
